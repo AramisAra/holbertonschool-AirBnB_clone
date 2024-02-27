@@ -3,6 +3,7 @@
 import uuid
 import datetime
 
+
 class BaseModel():
     """ 
     Class representing the base model for all other models in the project.
