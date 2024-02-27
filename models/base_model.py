@@ -5,7 +5,7 @@ import datetime
 
 
 class BaseModel():
-    """ 
+    """
     Class representing the base model for all other models in the project.
     """
 
@@ -15,8 +15,8 @@ class BaseModel():
 
         Attributes:
             id (str): The unique identifier of the instance.
-            created_at (datetime): The date and time when the instance was created.
-            updated_at (datetime): The date and time when the instance was last updated.
+            created_at (datetime): The date and time when the instance created.
+            updated_at (datetime): Date/time when the instance last updated.
         """
         self.id = str(uuid.uuid4())
         self.created_at = datetime.datetime.now()
@@ -25,7 +25,7 @@ class BaseModel():
     def __str__(self):
         """
         Returns a string representation of the object.
-        The string includes the class name, the object's ID, and its attributes.
+        The string includes the attributes.
         """
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
