@@ -21,7 +21,7 @@ The console is a command line interpreter that permits management of the backend
 of HolbertonBnB. It can be used to handle and manipulate all classes utilized by 
 the application (achieved by calls on the `storage` object defined above).
 
-###Using the Console
+### Using the Console
 
 The HolbertonBnB console can be run both interactively and non-interactively. 
 To run the console in non-interactive mode, pipe any command(s) into an execution 
