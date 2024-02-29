@@ -91,6 +91,8 @@ Contributors 2
 
     @AramisAra
     Aramis Martinez
+    @euni-bit
+    Eunielis Serrano
 
 Languages
 
