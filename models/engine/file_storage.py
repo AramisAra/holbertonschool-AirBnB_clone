@@ -5,9 +5,9 @@ from models.base_model import BaseModel
 
 class FileStorage():
     """ This class controls file storage """
+
     __file_path = "file.json"
     __objects = {}
-
 
     def all(self):
         """ Returns the dictionary __objects """

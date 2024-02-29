@@ -3,7 +3,8 @@
 from models.base_model import BaseModel
 
 class City(BaseModel):
-    """ """
+    """Represents a city in the AirBnB clone project."""
+
     state_id = ""
     name = ""
 
