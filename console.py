@@ -34,10 +34,6 @@ class HBNBCommand(cmd.Cmd):
         """Quit command to exit the program."""
         return True
 
-    def do_help(self, arg):
-        """Provide help for the quit command. """
-        return True
-
     def do_EOF(self, arg):
         """EOF signal to exit the program."""
         print("")
@@ -48,16 +44,15 @@ class HBNBCommand(cmd.Cmd):
         Create a new instance of BaeModel and save it to the JSON file.
         Usage: create <class_name>
         """
-        commands = shlex.split(arg)
-
-        if len(commands) == 0:
+        if not arg:
             print("** class name missing**")
-        elif commands[0] not in self.valid_classes:
-            print("** class doesn't exist **")
-        else:
-            new_instance = BaseModel()
+            return
+        try:
+            new_instance = eval(arg)()
             new_instance.save()
             print(new_instance.id)
+        except NameError:
+            print("** class doesn't exist **")
 
     def do_show(self, arg):
         """ 
