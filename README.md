@@ -1,22 +1,28 @@
-AirBnB Clone- The Console
 
-The console is the first segment of the AirBnB project at Holberton School that will collectively cover fundamental concepts of higher level programming. The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.
+<h1>AirBnB Clone- The Console</h1>
+<center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQRBg2DrFJ8YJw-Dhp832tMnzvgkNTW3VsJw&s"/></center>
 
-Functionalities of this command interpreter: Create a new object (ex: a new User or a new Place) Retrieve an object from a file, a database etc... Do operations on objects (count, compute stats, etc...) Update attributes of an object Destroy an object
-Table of Content
+<p>The console is the first segment of the AirBnB project at Holberton School that will collectively cover fundamental concepts of higher level programming. The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.</p>
 
-Environment Installation File Descriptions Usage Examples of use Bugs Authors License
-Environment
+<p>Functionalities of this command interpreter: Create a new object (ex: a new User or a new Place) Retrieve an object from a file, a database etc... Do operations on objects (count, compute stats, etc...) Update attributes of an object Destroy an object content</p>
 
-This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
-Installation
 
-Clone this repository: git clone "https://github.com/AramisAra/holbertonschool-AirBnB_clone"
+<p> Environment Installation File Descriptions Usage Examples of use Bugs Authors License
+Environment </p>
 
-Access AirBnb directory: cd AirBnB_clone Run hbnb(interactively): ./console and enter command Run hbnb(non-interactively): echo "" | ./console.py
-File Descriptions
+<p> This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
+Installation </p>
 
-console.py - the console contains the entry point of the command interpreter. List of commands this console current supports:
+<p> <strong>  Clone this repository: git clone "https://github.com/AramisAra/holbertonschool-AirBnB_clone" </strong> </p>
+
+
+<p> Access AirBnb directory: cd AirBnB_clone Run hbnb(interactively): ./console </p> 
+<p> enter command Run hbnb(non-interactively): echo "" | ./console.py </p>
+
+<h2> File Descriptions </h2>
+
+<p> console.py - the console contains the entry point of the command interpreter.</p> 
+<ul> List of commands this console current supports: </ul>
 
 EOF - exits console quit - exits console - overwrites default emptyline method and does nothing create - Creates a new instance ofBaseModel, saves it (to the JSON file) and prints the id destroy - Deletes an instance based on the class name and id (save the change into the JSON file). show - Prints the string representation of an instance based on the class name and id. all - Prints all string representation of all instances based or not on the class name. update - Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file). models/ directory contains classes used for this project: base_model.py - The BaseModel class from which future classes will be derived
 
@@ -85,6 +91,8 @@ Contributors 2
 
     @AramisAra
     Aramis Martinez
+    @euni-bit
+    Eunielis Serrano
 
 Languages
 
