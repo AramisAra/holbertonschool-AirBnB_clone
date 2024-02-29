@@ -3,13 +3,27 @@
 import cmd
 import shlex
 from models.base_model import BaseModel
+from models.amenity import Amenity
+from models.city import City
+from models.user import User
+from models.review import Review
+from models.place import Place
+from models.state import State
 from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
     """Defines the HolbertonBnB command interpreter."""
     prompt = "(hbnb)"
-    valid_classes = ["BaseModel"]
+    valid_classes = {
+        "BaseModel": BaseModel,
+        "Amenity": Amenity,
+        "City": City,
+        "Place": Place,
+        "User": User,
+        "Review": Review,
+        "State": State
+    }
 
 
     def emptyline(self):
@@ -20,9 +34,9 @@ class HBNBCommand(cmd.Cmd):
         """Quit command to exit the program."""
         return True
 
-    def help_quit(self):
+    def do_help(self, arg):
         """Provide help for the quit command. """
-        print("Quit command to exit the program")
+        return True
 
     def do_EOF(self, arg):
         """EOF signal to exit the program."""

@@ -5,9 +5,8 @@ from models.base_model import BaseModel
 
 class FileStorage():
     """ This class controls file storage """
-    def __init__(self):
-        self.__file_path = "file.json"
-        self.__objects = {}
+    __file_path = "file.json"
+    __objects = {}
 
 
     def all(self):
@@ -29,6 +28,6 @@ class FileStorage():
         try:
             with open(self.__file_path, 'r', encoding="utf-8") as file:
                 self.__objects = {k: BaseModel(**v)
-                                  for k, v in json.load(file).items()}
+                                  for k, v in json.load(file).items() + ""}
         except Exception:
             pass
