@@ -15,9 +15,73 @@ Installation </p>
 
 <p> <strong>  Clone this repository: git clone "https://github.com/AramisAra/holbertonschool-AirBnB_clone" </strong> </p>
 
+## Console 
 
-<p> Access AirBnb directory: cd AirBnB_clone Run hbnb(interactively): ./console </p> 
-<p> enter command Run hbnb(non-interactively): echo "" | ./console.py </p>
+The console is a command line interpreter that permits management of the backend 
+of HolbertonBnB. It can be used to handle and manipulate all classes utilized by 
+the application (achieved by calls on the `storage` object defined above).
+
+###Using the Console
+
+The HolbertonBnB console can be run both interactively and non-interactively. 
+To run the console in non-interactive mode, pipe any command(s) into an execution 
+of the file `console.py` at the command line.
+
+```
+$ echo "help" | ./console.py
+(hbnb) 
+Documented commands (type help <topic>):
+========================================
+EOF  all  count  create  destroy  help  quit  show  update
+
+(hbnb) 
+$
+```
+Alternatively, to use the HolbertonBnB console in interactive mode, run the 
+file `console.py` by itself:
+
+```
+$ ./console.py
+```
+
+While running in interactive mode, the console displays a prompt for input:
+
+```
+$ ./console.py
+(hbnb) 
+```
+
+To quit the console, enter the command `quit`.
+
+```
+$ ./console.py
+(hbnb) quit
+$
+```
+
+The HolbertonBnB console supports the following commands:
+
+* **create**
+  * Usage: `create <class>`
+
+Creates a new instance of a given class. The class' ID is printed and 
+the instance is saved to the file `file.json`.
+
+```
+$ ./console.py
+(hbnb) create BaseModel
+119be863-6fe5-437e-a180-b9892e8746b8
+(hbnb) quit
+$ cat file.json ; echo ""
+{"BaseModel.119be863-6fe5-437e-a180-b9892e8746b8": {"updated_at": "2019-02-17T2
+1:30:42.215277", "created_at": "2019-02-17T21:30:42.215277", "__class__": "Base
+Model", "id": "119be863-6fe5-437e-a180-b9892e8746b8"}}
+```
+
+* **show**
+  * Usage: `show <class> <id>` or `<class>.show(<id>)`
+
+Prints the string representation of a class instance based on a given id.
 
 <h2> File Descriptions </h2>
 
